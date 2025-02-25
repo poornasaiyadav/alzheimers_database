@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alzheimer's Disease</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="p1.jpg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Alzheimer's Research &amp; Resource Portal</h1>
+  </header>
+
+  <main class="main-container">
+    <!-- Left Column: Tools Menu -->
+    <aside class="left-column">
+      <nav class="tools-menu">
+        <h2>Tools</h2>
+        <ul>
+          <li><button id="blastMenuBtn">BLAST</button></li>
+          <li><button id="keggMenuBtn">KEGG</button></li>
+          <li><button id="primerMenuBtn">Primer Designing Tool</button></li>
+          <li><button id="translateMenuBtn">Transcription &amp; Translation Tool</button></li>
+          <li><button id="complementMenuBtn">Complementary Tool</button></li>
+          <li><button id="uniprotMenuBtn">UniProt</button></li>
+          <li><button id="chemblMenuBtn">ChEMBL</button></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Center Column: Info + Search -->
+    <section class="center-column">
+      <div class="alz-info">
+        <h2>Alzheimer Disease</h2>
+        <p>
+          Alzheimer's disease is a progressive neurological disorder that leads to memory loss and cognitive decline.
+          It is characterized by the accumulation of amyloid plaques and tau tangles in the brain, leading to neuronal death.
+        </p>
+        <p>
+          This database provides critical information on Alzheimer's disease, including key genes and proteins involved,
+          post-translational modifications (PTMs), cellular localization of proteins, and 3D structures.
+        </p>
+        <div class="more-info-link">
+          <a href="https://www.mayoclinic.org/diseases-conditions/alzheimers-disease/symptoms-causes/syc-20350447" target="_blank">
+            Click this link to know more about Alzheimer's Disease
+          </a>
+        </div>
+      </div>
+
+      <div class="search-section">
+        <label for="geneSearch">Search Gene/Variant/RS_ID/Chr:</label>
+        <input type="text" id="geneSearch" placeholder="Enter search term" />
+        <button id="searchButton">Search</button>
+      </div>
+
+      <!-- Dynamic content area for tools output -->
+      <div id="dynamicContent" class="dynamic-content"></div>
+    </section>
+
+    <!-- Right Column: Images -->
+    <aside class="right-column">
+      <div class="image-card">
+        <img src="crc_3 (1).jpg" alt="Brain MRI of Alzheimer's Disease" />
+      </div>
+      <div class="image-card">
+        <img src="crc_1.jpg" alt="Neurodegeneration Illustration" />
+      </div>
+      <div class="image-card">
+        <img src="crc_2.jpg" alt="Brain Model of Alzheimer's" />
+      </div>
+    </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Alzheimer's Research &amp; Resource Portal. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

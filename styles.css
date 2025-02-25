@@ -1,0 +1,253 @@
+/* Define CSS variables */
+:root {
+  --heading-bg: #003366; /* Deep blue */
+  --link-color-1: #003366;
+  --link-color-2: #0055a5;
+  --input-border: #ccc;
+  --table-border: #ddd;
+  --table-header-bg: #003366;
+  --table-header-color: #fff;
+  --light-bg: #f8f8f8;
+  --primary-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* General Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--primary-font);
+  background-color: var(--light-bg);
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Uniform Heading Background for h1, h2, etc. */
+h1, h2, h3, h4, h5, h6 {
+  background-color: var(--heading-bg);
+  color: #fff;
+  padding: 10px;
+  margin: 0 0 10px 0;
+}
+
+/* Header */
+header {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 3px solid var(--heading-bg);
+}
+
+/* Main Container with 3 columns */
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Left Column: Tools Menu */
+.left-column {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.tools-menu h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.tools-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tools-menu li {
+  margin-bottom: 10px;
+}
+
+.tools-menu button {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--heading-bg);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  border-radius: 4px;
+  font-size: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.tools-menu button:hover {
+  background-color: var(--link-color-2);
+}
+
+/* Center Column: Info + Search */
+.center-column {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.alz-info h2 {
+  margin-top: 0;
+  font-size: 1.8em;
+}
+
+.alz-info p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+/* More info link styling */
+.more-info-link {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.more-info-link a {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+  background-color: var(--link-color-1);
+  transition: background-color 0.3s ease;
+}
+
+.more-info-link a:hover {
+  background-color: var(--link-color-2);
+}
+
+/* Search Section Styling */
+.search-section {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.search-section label {
+  flex-basis: 100%;
+  font-weight: bold;
+}
+
+.search-section input {
+  flex: 1 1 300px;
+  padding: 10px;
+  border: 1px solid var(--input-border);
+  border-radius: 4px;
+  font-size: 16px;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.search-section input:focus {
+  outline: none;
+  border-color: var(--heading-bg);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.search-section button {
+  padding: 10px 16px;
+  background-color: var(--heading-bg);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.search-section button:hover {
+  background-color: var(--link-color-2);
+}
+
+/* Dynamic content area (Search Results / Tools Output) */
+.dynamic-content {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: var(--light-bg);
+  min-height: 200px;
+  border-radius: 8px;
+}
+
+/* Styled Table for Search Results */
+.dynamic-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.dynamic-content th,
+.dynamic-content td {
+  border: 1px solid var(--table-border);
+  padding: 10px;
+  text-align: left;
+}
+
+.dynamic-content th {
+  background-color: var(--table-header-bg);
+  color: var(--table-header-color);
+}
+
+/* Right Column: Images */
+.right-column {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.image-card img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.image-card img:hover {
+  transform: scale(1.02);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: var(--heading-bg);
+  color: #fff;
+  margin-top: 20px;
+}
+
+/* Button Blink Effect on Click */
+.tools-menu button:active,
+.search-section button:active {
+  animation: blink-on-click 0.5s infinite;
+}
+
+@keyframes blink-on-click {
+  0%, 100% {
+    background-color: var(--link-color-1);
+  }
+  50% {
+    background-color: var(--link-color-2);
+  }
+}
+
+/* Additional styling for new window search results */
+@media print {
+  body {
+    background: #fff;
+  }
+}
